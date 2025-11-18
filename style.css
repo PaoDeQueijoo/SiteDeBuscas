@@ -89,11 +89,11 @@ div input:focus {
 }
 
 main {
-    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
+    /* overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
     max-width: 80rem; /* Largura máxima do conteúdo principal */
     margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
     margin-top: 2rem; /* Margem no topo */
-    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
+    /* height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
 }
 
 article {
@@ -147,8 +147,8 @@ article a:hover {
 }
 
 .footer {
-    position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
-    bottom: 0; /* Alinha na parte inferior */
+    /* position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
+    /* bottom: 0; /* Alinha na parte inferior */
     left: 0; /* Alinha à esquerda */
     width: 100%; /* Largura total */
     color: var(--tertiary-color); /* Cor do texto */
