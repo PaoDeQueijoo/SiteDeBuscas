@@ -1,0 +1,43 @@
+[
+    {
+        "nome": "HTML",
+        "descricao": "HTML (HyperText Markup Language) é a linguagem padrão para criar e estruturar páginas web e suas aplicações. Ela usa tags para anotar o texto e outros conteúdos para exibição em um navegador.",
+        "tipo": "Linguagem de Marcação",
+        "link": "https://www.w3schools.com/html"
+    },
+
+    {
+        "nome": "CSS",
+        "descricao": "Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web. O código CSS pode ser aplicado diretamente nas tags ou ficar contido em um arquivo externo.",
+        "tipo": "Folha de Estilo",
+        "link": "https://www.w3schools.com/css"
+    },
+
+    {
+        "nome": "JavaScript",
+        "descricao": "HTML (HyperText Markup Language) é a linguagem padrão para criar e estruturar páginas web e suas aplicações. Ela usa tags para anotar o texto e outros conteúdos para exibição em um navegador.",
+        "tipo": "Linguagem de Script",
+        "link": "https://www.w3schools.com/js"
+    },
+
+    {
+        "nome": "Python",
+        "descricao": "Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.",
+        "tipo": "Linguagem de Propósito Geral",
+        "link": "https://www.w3schools.com/python"
+    },
+
+    {
+        "nome": "Java",
+        "descricao": "Java é uma linguagem de programação orientada a objetos, popular para desenvolvimento de aplicações corporativas, mobile (Android) e sistemas de grande escala. É conhecida por sua portabilidade, rodando em qualquer máquina que possua a Java Virtual Machine (JVM).",
+        "tipo": "Linguagem de Propósito Geral",
+        "link": "https://www.w3schools.com/java"
+    },
+
+    {
+        "nome": "C#",
+        "descricao": "C# (pronuncia-se C sharp) é uma linguagem de programação moderna, orientada a objetos e desenvolvida pela Microsoft como parte da sua plataforma .NET. É amplamente utilizada para criar aplicações Windows, serviços web e desenvolvimento de jogos com a engine Unity.",
+        "tipo": "Linguagem de Propósito Geral",
+        "link": "https://www.w3schools.com/cs"
+    }
+]

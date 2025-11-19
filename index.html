@@ -24,7 +24,7 @@
             <!-- <input type="search"> cria um campo de texto otimizado para buscas. -->
             <input type="search" placeholder="Digite o que busca aqui...">
             <!-- <button> cria um botão clicável. O 'id' é um identificador único para este elemento. -->
-            <button id="botao-busca">Buscar</button>
+            <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
         </div>
 
     </header>
@@ -40,42 +40,43 @@
             <p><strong>Tipo:</strong> Linguagem de Marcação</p>
             <p>HTML (HyperText Markup Language) é a linguagem padrão para criar e estruturar páginas web e suas aplicações. Ela usa "tags" para anotar o texto e outros conteúdos para exibição em um navegador.</p>
             <!-- <a> cria um hyperlink. 'href' especifica a URL de destino. -->
-            <a href="https://www.w3schools.com/html">Saiba mais</a>
+            <!-- E o "target="_blank" faz a página ser aberta em uma nova aba -->
+            <a href="https://www.w3schools.com/html" target="_blank">Saiba mais</a>
         </article>
 
         <article>
             <h2>CSS</h2>
             <p><strong>Tipo:</strong> Folha de Estilo</p>
             <p>Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web. O código CSS pode ser aplicado diretamente nas tags ou ficar contido em um arquivo externo.</p>
-            <a href="https://www.w3schools.com/css">Saiba mais</a>
+            <a href="https://www.w3schools.com/css" target="_blank">Saiba mais</a>
         </article>
 
         <article>
             <h2>JavaScript</h2>
             <p><strong>Tipo:</strong> Linguagem de Script</p>
             <p>JavaScript é uma linguagem de programação interpretada de alto nível, caracterizada como dinâmica, fracamente tipada e multiparadigma.</p>
-            <a href="https://www.w3schools.com/js">Saiba mais</a>
+            <a href="https://www.w3schools.com/js" target="_blank">Saiba mais</a>
         </article>
 
         <article>
             <h2>Python</h2>
             <p><strong>Tipo:</strong> Linguagem de Propósito Geral</p>
             <p>Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.</p>
-            <a href="https://www.w3schools.com/python">Saiba mais</a>
+            <a href="https://www.w3schools.com/python" target="_blank">Saiba mais</a>
         </article>
 
         <article>
             <h2>Java</h2>
             <p><strong>Tipo:</strong> Linguagem de Propósito Geral</p>
             <p>Java é uma linguagem de programação orientada a objetos, popular para desenvolvimento de aplicações corporativas, mobile (Android) e sistemas de grande escala. É conhecida por sua portabilidade, rodando em qualquer máquina que possua a Java Virtual Machine (JVM).</p>
-            <a href="https://www.w3schools.com/java">Saiba mais</a>
+            <a href="https://www.w3schools.com/java" target="_blank">Saiba mais</a>
         </article>
 
         <article>
             <h2>C#</h2>
             <p><strong>Tipo:</strong> Linguagem de Propósito Geral</p>
             <p>C# (pronuncia-se "C sharp") é uma linguagem de programação moderna, orientada a objetos e desenvolvida pela Microsoft como parte da sua plataforma .NET. É amplamente utilizada para criar aplicações Windows, serviços web e desenvolvimento de jogos com a engine Unity.</p>
-            <a href="https://www.w3schools.com/cs">Saiba mais</a>
+            <a href="https://www.w3schools.com/cs" target="_blank">Saiba mais</a>
         </article>
 
     </main>
@@ -92,52 +93,7 @@
 
     </footer>
 
-    <!-- A tag <script> é usada para incorporar código JavaScript, que adiciona interatividade à página. -->
-    <script>
-
-        // --- SELEÇÃO DE ELEMENTOS (DOM - Document Object Model) ---
-        // 'const' cria uma variável cujo valor não pode ser reatribuído.
-        // 'document.querySelector' encontra e retorna o primeiro elemento no documento que corresponde ao seletor CSS especificado.
-        const searchInput = document.querySelector('input[type="search"]'); 
-        // 'document.getElementById' encontra um elemento pelo seu atributo 'id', que é único na página.
-        const searchButton = document.getElementById('botao-busca'); 
-        // 'document.querySelectorAll' encontra e retorna uma lista de todos os elementos que correspondem ao seletor.
-        const articles = document.querySelectorAll('main article'); 
-
-        // --- FUNÇÃO DE BUSCA ---
-        // 'function' define um bloco de código reutilizável. Esta função irá filtrar os artigos.
-        function performSearch() {
-            // '.value' obtém o texto atual do campo de input.
-            // '.trim()' remove espaços em branco do início e do fim do texto.
-            // '.toLowerCase()' converte todo o texto para letras minúsculas, para que a busca não diferencie maiúsculas de minúsculas (ex: "HTML" e "html" serão tratados da mesma forma).
-            const searchTerm = searchInput.value.trim().toLowerCase();
-
-            // 'articles.forEach' executa uma função para cada item na lista de artigos.
-            articles.forEach(article => {
-                // Dentro de cada 'article', encontra o '<h2>' e pega seu conteúdo de texto com '.textContent'.
-                const articleTitle = article.querySelector('h2').textContent.toLowerCase();
-
-                // 'if' é uma estrutura condicional.
-                // '.includes()' verifica se o texto do título contém o termo que foi digitado na busca.
-                if (articleTitle.includes(searchTerm)) {
-                    // Se o título contém o termo, o estilo CSS 'display' do artigo é definido como 'block', tornando-o visível.
-                    article.style.display = 'block';
-                } else {
-                    // Caso contrário, o estilo 'display' é definido como 'none', escondendo o artigo.
-                    article.style.display = 'none';
-                }
-            });
-        }
-
-        // --- REGISTRO DE EVENTOS ---
-        // 'addEventListener' anexa uma função para ser executada quando um evento específico ocorre em um elemento.
-        // Aqui, quando o evento 'click' ocorrer no 'searchButton', a função 'performSearch' será chamada.
-        searchButton.addEventListener('click', performSearch);
-
-        // Aqui, quando o evento 'input' ocorrer (ou seja, a cada vez que o usuário digita ou apaga algo no campo), a função 'performSearch' será chamada, criando um filtro em tempo real.
-        searchInput.addEventListener('input', performSearch);
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
